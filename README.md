@@ -1,4 +1,5 @@
 # alumni frontend
+Repositório referente ao frontend do projeto Alumni
 
 Para rodar o projeto localmente, execute os seguintes passos:
 
