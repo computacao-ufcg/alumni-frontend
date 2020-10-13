@@ -9,9 +9,9 @@ import {history} from '../history'
 const Routes = () => (
     <Router history = {history}>
         <Switch>
+            <Route component={Home} exact path ="/"/>
             <Route component={Login} exact path ="/login"/>
-            <Route component={Home} exact path ="/home"/>
-            <Route component={NotFound} exact path ="/"/>
+            <Route component={NotFound} path ="/"/>
         </Switch>
     </Router>
 )

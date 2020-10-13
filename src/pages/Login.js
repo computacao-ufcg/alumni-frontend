@@ -11,12 +11,12 @@ const Login = () =>(
         </legend>
         
         <div class="input-block">
-            <label for="name">Nome completo</label>
+            <label for="name">User</label>
             <input name="name" id="name" required />
         </div>
         <div class="input-block">
             <label for="password">Senha</label>
-            <input name="password" id="password" required />
+            <input name="password" id="password" type='password'required />
         </div>
         <button className ="Envios" type="submit">Login</button>
     </fieldset>
