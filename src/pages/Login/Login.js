@@ -1,14 +1,17 @@
 import React from 'react'
+import Title from '../../components/Title'
+import Header from '../../components/Header'
+import './styles.css'
 
 const Login = () =>( 
     <>
-    <h1>Login</h1>
+    <Header></Header>
+    <div className = {'loginScreen'}>
+        <Title name ={"Login"}/>
+    </div>
     <p>Preencha os campos abaixo para continuar</p>
     <form>
     <fieldset>
-        <legend>
-            Seus dados
-        </legend>
         
         <div class="input-block">
             <label for="name">User</label>

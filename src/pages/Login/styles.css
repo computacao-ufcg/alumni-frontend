@@ -1,0 +1,53 @@
+.loginScreen {
+    display: grid ;
+}
+
+p{
+    font-size: 1.2rem;  
+}
+.input-block{
+    position: relative;
+}
+
+
+.input-block input{
+    border: none; 
+    background: rgba(0, 0, 0, .25);
+    color: #111111;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    width: 100%;
+    transition: all .1s linear;
+
+}
+
+.input-block label{
+    font-size: 1.2rem;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+legend{
+    font-size: 1.5rem;
+}
+
+.Envios{
+    background:#b5b5b5;
+    color: #111111;
+    padding: .5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-left: 12rem;
+
+}
+
+.Envios{
+    cursor: pointer;
+}
+
