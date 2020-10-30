@@ -3,14 +3,17 @@ import Title from '../../components/Title'
 import Header from '../../components/Header'
 import './styles.css'
 
-const Login = () =>( 
-    <>
+const Login = () =>{ 
+  
+  
+    return(
+   <>
     <Header></Header>
     <div className = {'loginScreen'}>
         <Title name ={"Login"}/>
     </div>
     <p>Preencha os campos abaixo para continuar</p>
-    <form>
+    <form >
     <fieldset>
         
         <div class="input-block">
@@ -25,5 +28,6 @@ const Login = () =>(
     </fieldset>
     </form>
     </>
-)
+    )
+}
 export default Login
