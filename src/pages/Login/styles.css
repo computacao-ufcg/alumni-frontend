@@ -1,12 +1,15 @@
 .loginScreen {
-    display: grid ;
+    display: flex ;
 }
 
 p{
-    font-size: 1.2rem;  
+    font-size: 1.5rem; 
+    text-align: center; 
 }
+
 .input-block{
     position: relative;
+
 }
 
 
@@ -18,19 +21,16 @@ p{
     padding: 1rem;
     font-size: 1.2rem;
     border-radius: 6px;
-    width: 100%;
-    transition: all .1s linear;
-
-}
-
-.input-block label{
-    font-size: 1.2rem;
+    width: 50%;
+    transition: all .1s linear; 
+    
 }
 
 fieldset {
     border: none;
     padding: 0;
-}
+    text-align: center;
+ }
 
 legend{
     font-size: 1.5rem;
@@ -43,11 +43,12 @@ legend{
     border: none;
     border-radius: 5px;
     margin-top: 2rem;
-    margin-left: 12rem;
+    font-size: 1rem; 
+    cursor: pointer;
 
 }
 
-.Envios{
-    cursor: pointer;
+.Envios:hover{
+    background-color: #b5b5b5e3;
 }
 

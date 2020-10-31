@@ -24,12 +24,19 @@ const Login = () =>{
         <fieldset>
             
             <div class="input-block">
-                <label for="name">User</label>
-                <input name="name" id="name" required  onChange = {(e) => {setName(e.target.value)}}/>
+                
+                <input name="name" 
+                    id="name" required  
+                    onChange = {(e) => {setName(e.target.value)}} 
+                    placeholder="User"/>
             </div>
             <div class="input-block">
-                <label for="password">Senha</label>
-                <input name="password" id="password" type='password'required onChange = {(e) => {setPassword(e.target.value)}} />
+
+                <input name="password" 
+                    id="password" 
+                    type='password'required 
+                    onChange = {(e) => {setPassword(e.target.value)}}
+                    placeholder="Senha" />
             </div>
             <button className ="Envios" type="submit">Login</button>
         </fieldset>
