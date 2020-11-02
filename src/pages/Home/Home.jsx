@@ -18,12 +18,12 @@ const Home = () => {
                 <p>Associações Pendentes</p>
                 <div name ="botao1">
                     <Link to={'alumnus'} >
-                    <button class="perfis" type ="submit" >Perfis</button> 
+                    <button className="perfis" type ="submit" >Perfis</button> 
                     </Link>
                 </div>
                 <div name="botao2">
                     <Link to={'empregador'}>
-                    <button class="empregadores" type ="submit">Empregadores</button> 
+                    <button className="empregadores" type ="submit">Empregadores</button> 
                     </Link>
                 </div>
             
