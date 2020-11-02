@@ -1,0 +1,21 @@
+.possibleMatches{
+    text-align: center;
+}
+
+.possibleMatches p{
+    color: #0073e5;
+    font-size: 2rem;
+    font-weight: 650;
+    margin-top: 0;
+}
+
+.possibleMatches button{
+    background:#0073e5;
+    color: #f1f1f1;
+    padding: .7rem 5rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5rem;
+    font-size: 1.1rem; 
+    cursor: pointer;
+}
