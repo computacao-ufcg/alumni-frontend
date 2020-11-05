@@ -24,14 +24,14 @@ const Login = () =>{
         <form onSubmit={handleSubmit}>
         <fieldset>
             
-            <div class="input-block">
+            <div className="input-block">
                 
                 <input name="name" 
                     id="name" required  
                     onChange = {(e) => {setName(e.target.value)}} 
                     placeholder="User"/>
             </div>
-            <div class="input-block">
+            <div className="input-block">
 
                 <input name="password" 
                     id="password" 

@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-    PieChart, Pie, Legend, Tooltip,
+    PieChart, Pie, Tooltip,
   } from 'recharts';
 
   const GraphLocal = () => {
