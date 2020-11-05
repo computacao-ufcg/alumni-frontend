@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Title from '../../components/Title'
 import Header from '../../components/Header'
+import{Link} from 'react-router-dom'
 import './styles.css'
 
 const Login = () =>{ 
@@ -38,7 +39,9 @@ const Login = () =>{
                     onChange = {(e) => {setPassword(e.target.value)}}
                     placeholder="Senha" />
             </div>
-            <button className ="Envios" type="submit">Login</button>
+            <Link to={'home'}>
+                <button className ="Envios" type="submit">Login</button>
+            </Link>
         </fieldset>
         </form>
         </>

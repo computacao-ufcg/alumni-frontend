@@ -2,11 +2,14 @@ import React from 'react'
 import{Link} from 'react-router-dom'
 import Header from '../../components/Header'
 import Title from '../../components/Title'
+import GraphGenero from './GraphGenero.jsx'
+import GraphSetor from './GraphSetor.jsx'
+import GraphLocal from './GraphLocal.jsx'
+import GraphProfissoes from './GraphProfissoes.jsx'
 import "./styles.css"
-import Data from "./fakeData.json"
 
-const Home = () => {
 
+const Home = () => { 
 
     return(
         <React.Fragment>
@@ -17,6 +20,7 @@ const Home = () => {
             <div id ="pending-matches">
                 <p>Associações Pendentes</p>
                 <div name ="botao1">
+                    
                     <Link to={'alumnus'} >
                     <button className="perfis" type ="submit" >Perfis</button> 
                     </Link>
@@ -30,22 +34,30 @@ const Home = () => {
             </div>
             <div id="statistics">
                 <p>Estatísticas</p>
-                <div className = "posts">
-                    {Data.map(post => {
-                        return(
-                            <>
-                                <h4>{post.nome}</h4>
-                                <p>{post.ano_conclusao}</p>
-                                <p>{post.trabalho_atual}</p>
-                                
-                            </>
-                        )   
-
-                    })}
+                <div className = "container1">
+                    <div className="setor">
+                        <p>Setor de Trabalho</p>
+                        <GraphSetor></GraphSetor>
+                    </div>
+                    <div className="genero">
+                        <p>Gênero</p>
+                        <GraphGenero></GraphGenero> 
+                    </div>  
+                    
                 </div> 
+                <div className="container2">
+                    <div className="localTrabalho">
+                        <p>País de Trabalho</p>
+                        <GraphLocal></GraphLocal> 
+                    </div>
+                    <div className="Profissões">
+                        <p>Profissões</p>
+                        <GraphProfissoes></GraphProfissoes> 
+                    </div>
+                </div>
             </div>
         </React.Fragment>
     )
 }
 
-export default Home
+export default Home;

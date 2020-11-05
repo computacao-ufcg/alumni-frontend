@@ -19,3 +19,6 @@
     font-size: 1.1rem; 
     cursor: pointer;
 }
+.possibleMatches button:hover{
+    background-color: #0180ff;
+}
