@@ -1,18 +1,48 @@
 import React, {useState} from 'react'
 import Title from '../../components/Title'
 import Header from '../../components/Header'
-import{Link} from 'react-router-dom'
+import {as, backend} from '../../services/api'
 import './styles.css'
+
 
 const Login = () =>{ 
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")    
     
-    const handleSubmit = (evt) => {
+    const handleSubmit = async (evt) => {
         evt.preventDefault();
-        alert(`Submitting Name ${name}`)
-        alert(`Submitting Password ${password}`)
+        let query = 'publicKey'
+        const res = await backend.get(query,{})
+        if(res){
+            let publickey = res.data.publicKey
+            handleLogin(name, password, publickey)
+            
+        }else{
+            alert('Public Key não encontrada')
+        }
+
     }
+
+    const handleLogin = async (name, password, publickey) => {
+        let query = 'as/tokens'
+        const res = await as.post(query,{
+            "credentials": {
+                "username": name ,
+                "password": password,
+              },
+              "publicKey": publickey
+        })
+        .then(res =>{
+            localStorage.setItem('token',res.data.token)
+            window.location.href = '/home'
+        })
+        .catch(err =>{
+            alert('Usuário ou senha incorretos')
+        })
+        
+    }
+
+
 
     return(
     <>
@@ -39,9 +69,8 @@ const Login = () =>{
                     onChange = {(e) => {setPassword(e.target.value)}}
                     placeholder="Senha" />
             </div>
-            <Link to={'home'}>
-                <button className ="Envios" type="submit">Login</button>
-            </Link>
+            <button className ="Envios" type="button" onClick ={handleSubmit}>Login</button>
+            
         </fieldset>
         </form>
         </>
