@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import Routes from '../components/Routes';
+import Routes from '../components/Routes/Routes';
 
 const App =() => (
     <main className="App">

@@ -1,5 +1,7 @@
 .selectBoxes{
-    display: grid;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .selectBoxes select{
@@ -20,8 +22,12 @@
     cursor: pointer;
 
 }
+.empregadorContainer{
+    text-align: center;
 
-.selectBoxes button{
+}
+
+.empregadorContainer button{
     background:#0073e5;
     color: #f1f1f1;
     text-align: center;
@@ -34,6 +40,7 @@
     font-size: 1.1rem; 
     cursor: pointer;
 }
-.selectBoxes button:hover{
+
+.empregadorContainer button:hover{
     background-color: #0180ff;
 }
