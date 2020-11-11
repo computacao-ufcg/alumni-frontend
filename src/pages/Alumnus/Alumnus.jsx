@@ -1,6 +1,4 @@
 import React, {useEffect} from 'react'
-import {SelectPicker as Egresso}  from 'rsuite'
-import {SelectPicker as Match}  from 'rsuite'
 import { Pagination } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 import ListAlumnus from './ListAlumnus'

@@ -6,6 +6,7 @@ import Login from '../../pages/Login/Login'
 import Empregador from '../../pages/Empregador/Empregador'
 import Alumnus from '../../pages/Alumnus/Alumnus'
 import NotFound from '../NotFound'
+import Egressos from '../../pages/Egressos/Egressos'
 
 const Routes = () => (
     <BrowserRouter>
@@ -14,6 +15,7 @@ const Routes = () => (
             <Route component={() => <Login/>} exact path ="/"/>
             <PrivateRoute component={() => <Empregador/>} path ="/empregador"/>
             <PrivateRoute component={() => <Alumnus/>}  path ="/alumnus"/>
+            <PrivateRoute component={() => <Egressos/>}  path ="/egressos"/>
             <Route component={() => <NotFound/>} path ="/"/>
         </Switch>
     </BrowserRouter>

@@ -30,6 +30,11 @@ const Home = () => {
                     <button className="empregadores" type ="submit">Empregadores</button> 
                     </Link>
                 </div>
+                <div name="botao2">
+                    <Link to={'egressos'}>
+                    <button className="egressos" type ="submit">Linkedin</button> 
+                    </Link>
+                </div>
             
             </div>
             <div id="statistics">
