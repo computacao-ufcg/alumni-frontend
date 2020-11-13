@@ -4,46 +4,26 @@ import {SelectPicker as Tipo}  from 'rsuite'
 import 'rsuite/dist/styles/rsuite-default.css';
 import Header from '../../components/Header'
 import Title from '../../components/Title'
+import Classificados from './Classificados'
+import Desclassificados from './Desclassificados'
+import { Nav, Dropdown } from 'rsuite';
 
 import './styles.css'
+import { useState } from 'react';
 
 const Empregador = () => {
    
-    const data =[
-        {
-          "label": "Público",
-          "value": "Público",
-          "role": "Master"
-        },
-        {
-          "label": "Privado",
-          "value": "Privado",
-          "role": "Master"
-        }
-    ]
-
-    const data2 =[
-        {
-          "label": "Empresa",
-          "value": "Empresa",
-          "role": "Master"
-        },
-        {
-          "label": "Indústria",
-          "value": "Indústria",
-          "role": "Master"
-        },
-        {
-          "label": "Universidade",
-          "value": "Universidade",
-          "role": "Master"
-        },
-        {
-            "label": "Terceiros",
-            "value": "Terceiros",
-            "role": "Master"
-          }
-    ]
+  const [data, setData] = useState(<Classificados/>)
+  const [activeNav, setActiveNav] = useState('Classificados')
+  
+  const handleNav = (eventKey) =>{
+    if(eventKey === 'Classificados'){
+      setData(<Classificados/>)
+    }else if( eventKey === 'Desclassificados'){
+      setData(<Desclassificados/>)
+    }
+    setActiveNav(eventKey)
+  }
 
     return(
         <React.Fragment>
@@ -52,11 +32,11 @@ const Empregador = () => {
                 <Title name={"Empregador"}/> 
             </div>
             <div className= 'empregadorContainer'>
-                <div className ={'selectBoxes'}>
-                    <Setor data={data} placeholder={'Setor'} style={{width:500}}/>
-                    <Tipo data={data} placeholder={'Tipo'} style={{width:500}}/>
-                </div>
-                <button type='button'>Associar</button>
+              <Nav onSelect={handleNav} activeKey={activeNav} appearance={'tabs'}>
+                <Nav.Item eventKey={'Classificados'}>Classificados</Nav.Item>
+                <Nav.Item eventKey={'Desclassificados'}>Não Classificados</Nav.Item>
+              </Nav>
+              {data}
             </div>
         </React.Fragment>
     )
