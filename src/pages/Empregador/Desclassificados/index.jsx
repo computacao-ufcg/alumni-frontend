@@ -3,7 +3,7 @@ import {backend} from '../../../services/api'
 import ListDesclassificados from './ListDesclassificados'
 import {Pagination, SelectPicker, Input, InputGroup } from 'rsuite'
 
-const Desclassificados = () => {
+const Desclassificados = (props) => {
     const [page, setPage] = useState(0)
     const [data, setData] = useState([])
     const [dataMaster, setDataMaster] = useState({})
@@ -73,13 +73,20 @@ const Desclassificados = () => {
     }
 
     const handleSubmit = () =>{
-        const res = backend.put('employer/' + type + '/' + linkedinID, {headers:{'Authentication-Token': localStorage.getItem('token')}}) 
+    {/** const res = backend.put('employer/' + type + '/' + linkedinID, {headers:{'Authentication-Token': localStorage.getItem('token')}}) 
         .then(res =>{
             console.log(res)
         })
         .catch(err =>{
             console.log(err)
-        })
+        })*/}
+        let objeto ={
+            'tipo':type,
+            'linkedinID':linkedinID,
+            'name':selectEmpresa
+        }
+
+        props.handleData(objeto)
     }
 
 

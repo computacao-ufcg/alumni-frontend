@@ -35,12 +35,9 @@ const ListDesclassificados =(props) =>{
 
                 <Cell>
                 {rowData => {
-                    function handleAction() {
-                        window.location.href = rowData.linkedinId
-                    }
                     return (
                     <span>
-                        <a onClick={handleAction}>Link</a> 
+                        <a target={'_blank'} href={rowData.linkedinId}>Link</a> 
                         
                     </span>
                     );
