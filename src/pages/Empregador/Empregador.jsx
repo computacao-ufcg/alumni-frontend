@@ -1,6 +1,4 @@
 import React from 'react'
-import {SelectPicker as Setor}  from 'rsuite'
-import {SelectPicker as Tipo}  from 'rsuite'
 import 'rsuite/dist/styles/rsuite-default.css';
 import Header from '../../components/Header'
 import Title from '../../components/Title'
