@@ -12,17 +12,25 @@ import './styles.css'
 import { useState } from 'react';
 
 const Empregador = () => {
-   
-  const [data, setData] = useState(<Classificados/>)
+  
+  const [dataAux, setDataAux] = useState([])
+  const [data, setData] = useState(<Classificados data={dataAux}/>)
   const [activeNav, setActiveNav] = useState('Classificados')
+ 
   
   const handleNav = (eventKey) =>{
     if(eventKey === 'Classificados'){
-      setData(<Classificados/>)
+      setData(<Classificados data={dataAux}/>)
     }else if( eventKey === 'Desclassificados'){
-      setData(<Desclassificados/>)
+      setData(<Desclassificados handleData = {handleData}/>)
     }
     setActiveNav(eventKey)
+  }
+
+  const handleData = (elemento) =>{
+    let list = dataAux
+    list.push(elemento)
+    setDataAux(list)
   }
 
     return(

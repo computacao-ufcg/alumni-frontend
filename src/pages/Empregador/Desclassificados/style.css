@@ -5,5 +5,10 @@
 .inputEmpresa {
     border:none;
     width: 500px;
+    background-color: transparent
+}
+
+.inputEmpresa:focus {
+    outline: none;
 }
 
