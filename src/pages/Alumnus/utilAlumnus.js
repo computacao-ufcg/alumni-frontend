@@ -15,6 +15,22 @@ const data = [
             }
         ]
     },
+    { 
+        'name': 'Thiago Massoni',
+        'possibleMatches':[
+            {
+                'label': 'Thiago Castanha Massoni',
+                'value': 'Thiago Castanha Massoni',
+                'role': 'Master' 
+            },
+            {
+                'label': 'Thiago Lima Massoni',
+                'value': 'Thiago Lima Massoni',
+                'role': 'Master' 
+            }
+        ]
+
+    },
     {
         'name':'Francisco Brasileiro',
         'possibleMatches': [
@@ -69,6 +85,38 @@ const data = [
                 'role': 'Master'
             }
         ]  
+    },
+    {
+        'name': 'Livia Sampaio',
+        'possibleMatches':[
+            {
+                'value': 'Livia Sampaio Campos',
+                'label': 'Livia Sampaio Campos',
+                'role': 'Master'
+            },
+            {
+                'value': 'Livia Campos da Silva',
+                'label': 'Livia Campos da Silva',
+                'role': 'Master'
+            }
+        ]
+
+    },
+    {
+        'name': 'Carlos Wilson',
+        'possibleMatches':[
+            {
+                'value':'Carlos Wilson Dantas Almeida',
+                'label':'Carlos Wilson Dantas Almeida',
+                'role': 'Master'
+            },
+            {
+                'value':'Carlos Wilson Santos ',
+                'label':'Carlos Wilson Santos',
+                'role': 'Master' 
+            }
+            
+        ]
     },
     {
         'name': 'Marcelo Barros',
@@ -221,16 +269,16 @@ const data = [
         ]
     },
     {
-        'name':'Jurema do Ó',
+        'name':'Ricardo do Ó',
         'possibleMatches': [
             {
-                'value':'Jurema do Ó Agra',
-                'label': 'Jurema do Ó Agra',
+                'value':'Ricardo do Ó Agra',
+                'label': 'Ricardo do Ó Agra',
                 'role': 'Master'
             },
             {
-                'value':'Jurema Braga do Ó',
-                'label':'Jurema Braga do Ó',
+                'value':'Ricardo Braga do Ó',
+                'label':'Ricardo Braga do Ó',
                 'role': 'Master'
             },
             {
