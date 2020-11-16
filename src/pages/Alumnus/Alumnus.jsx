@@ -8,10 +8,14 @@ import Title from '../../components/Title'
 import { backend } from '../../services/api'
 import {data} from './utilAlumnus'
 
-import {SelectPicker}  from 'rsuite'
-
 import './styles.css'
 import { useState } from 'react';
+
+import {SelectPicker}  from 'rsuite'
+
+
+
+
 
 
 

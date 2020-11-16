@@ -2,6 +2,7 @@ const data = [
     
     {
         'name':'Dalton Dario',
+        'index': 0,
         'possibleMatches': [
             {
                 'label':'Dalton Dario Serey',
@@ -17,6 +18,7 @@ const data = [
     },
     { 
         'name': 'Thiago Massoni',
+        'index': 1,
         'possibleMatches':[
             {
                 'label': 'Thiago Castanha Massoni',
@@ -33,6 +35,7 @@ const data = [
     },
     {
         'name':'Francisco Brasileiro',
+        'index': 2,
         'possibleMatches': [
             {
                 'label':'Francisco Vilar Brasileiro',
@@ -48,6 +51,7 @@ const data = [
     },
     {
         'name': 'Matheus Gaudêncio',
+        'index': 3,
         'possibleMatches': [
             {
                 'label':'Matheus Gaudêncio do Rêgo',
@@ -68,6 +72,7 @@ const data = [
     },
     {
         'name': 'João Brunet',
+        'index': 4,
         'possibleMatches': [
             {
                 'value':'João Arthur Monteiro Brunet',
@@ -88,6 +93,7 @@ const data = [
     },
     {
         'name': 'Livia Sampaio',
+        'index': 5,
         'possibleMatches':[
             {
                 'value': 'Livia Sampaio Campos',
@@ -104,6 +110,7 @@ const data = [
     },
     {
         'name': 'Carlos Wilson',
+        'index': 6,
         'possibleMatches':[
             {
                 'value':'Carlos Wilson Dantas Almeida',
@@ -120,6 +127,7 @@ const data = [
     },
     {
         'name': 'Marcelo Barros',
+        'index': 7,
         'possibleMatches':[
             {
                 'value':'Marcelo silva Barros',
@@ -140,6 +148,7 @@ const data = [
     },
     {
         'name': 'Rohit',
+        'index': 8,
         'possibleMatches': [
             {
                 'value':'Rohit',
@@ -149,7 +158,57 @@ const data = [
         ]
     },
     {
+        'name': 'Davi Oliveira',
+        'index': 9,
+        'possibleMatches': [
+            {
+                'value': 'Davi Gomes Oliveira',
+                'label': 'Davi Gomes Oliveira',
+                'role': 'Master'
+            },
+            {
+                'value': 'Davi Oliveira Fernandes',
+                'label': 'Davi Oliveira Fernandes',
+                'role': 'Master'
+            }
+        ]
+    },
+    {
+        'name': 'Diego Maia',
+        'index': 10,
+        'possibleMatches': [
+            {
+                'value': 'Diego Climerio Maia',
+                'label': 'Diego climerio Maia',
+                'role': 'Master'
+            },
+            {
+                'value': 'Diego Maia Passos',
+                'label': 'Diego Maia Passos',
+                'role': 'Master'
+            }
+        ]
+    },
+    {
+        'name': 'Jeanderson Candido',
+        'index': 11,
+        'possibleMatches':[
+            {
+                'value':'Jeanderson Barros Candido',
+                'label': 'Jeanderson Barros Candido',
+                'role': 'Master'
+            },
+            {
+                'value':'Jeanderson Silva Candido',
+                'label':'Jeanderson Silva Candido',
+                'role': "Master"
+            }
+        ]
+
+    },
+    {
         'name': 'Dandara Maria',
+        'index': 12,
         'possibleMatches' : [
             {
                 'value':'Dandara Maria Sousa',
@@ -170,6 +229,7 @@ const data = [
     },
     {
         'name':'Iana Passos',
+        'index': 13,
         'possibleMatches': [
             {
                 'value':'Iana Daya Passos',
@@ -190,6 +250,7 @@ const data = [
     },
     {
         'name':'Julia',
+        'index': 14,
         'possibleMatches': [
             {
                 'value':'Julia Agra',
@@ -210,6 +271,7 @@ const data = [
     },
     {
         'name': 'Daniel Silva',
+        'index': 15,
         'possibleMatches': [
             {
                 'value':'Daniel Brasil da Silva',
@@ -230,6 +292,7 @@ const data = [
     },
     {
         'name': 'Danielly Costa',
+        'index': 16,
         'possibleMatches': [
             {
                 'value':'Danielly Brasil da Costa',
@@ -250,6 +313,7 @@ const data = [
     },
     {
         'name':'Juliana Oliveira',
+        'index': 17,
         'possibleMatches': [
             {
                 'value':'Juliana Abrantes',
@@ -270,6 +334,7 @@ const data = [
     },
     {
         'name':'Ricardo do Ó',
+        'index': 18,
         'possibleMatches': [
             {
                 'value':'Ricardo do Ó Agra',
