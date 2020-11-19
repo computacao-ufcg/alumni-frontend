@@ -45,7 +45,7 @@ const Desclassificados = (props) => {
     },[])
 
     const handleDesclassificados = async(page) =>{
-        const res = await backend.get('employer/undefined/' + page,{headers:{'Authentication-Token': localStorage.getItem('token')}})
+        const res = await backend.get('employer/unclassified/' + page,{headers:{'Authentication-Token': localStorage.getItem('token')}})
         .then(res =>{
             setData(res.data.content)
             setDataMaster(res.data)

@@ -25,7 +25,7 @@ const Alumnus = () => {
     const [dataSelect, setDataSelect] = useState([])
 
     const handleProfile = async (page) =>{
-        let query = 'linkedin/entries/' + page
+        let query = 'alumnus' + page
         const res = await backend.get(query,{headers:{'Authentication-Token': localStorage.getItem('token')}})
         .then(res => {
             console.log(res)
