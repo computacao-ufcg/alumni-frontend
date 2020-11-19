@@ -29,7 +29,8 @@ const ListEgressos =(props) =>{
                     }
                     return (
                     <span>
-                        <a onClick={handleAction}>Link</a> 
+                        {/**<a onClick={handleAction}>Link</a> */}
+                        <a target={'_blank'} href={rowData.profileUrl}>Link</a> 
                         
                     </span>
                     );

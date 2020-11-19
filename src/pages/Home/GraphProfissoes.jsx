@@ -12,15 +12,14 @@ import {
 
     return(
         <PieChart  
-        width={180} height={150}>
-          <Pie dataKey="value" isAnimationActive={true} data={fakedata04}  outerRadius={45}  label >
+          width={180} height={150}>
+          <Pie dataKey="value" isAnimationActive={true} data={fakedata04} outerRadius={45} fill=" rgba(0,115,229,0.8)" label >
             <Cell fill={'#0073e5'}></Cell>
             <Cell fill={'#00ade5'}></Cell>
             <Cell fill={'#00c5e5'}></Cell>
             <Cell fill={'#00eee5'}></Cell>
-
           </Pie>
-            
+          <Tooltip />
         </PieChart>
     )
 }
