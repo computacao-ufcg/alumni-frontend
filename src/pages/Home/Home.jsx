@@ -19,20 +19,20 @@ const Home = () => {
             </div>
             <div id ="pending-matches">
                 <p>Associações Pendentes</p>
-                <div name ="botao1">
+                <div className ={"botao1"}>
                     
                     <Link to={'alumnus'} >
-                    <button className="perfis" type ="submit" >Perfis</button> 
+                    <button className={"perfis"} type ="submit" >Perfis</button> 
                     </Link>
                 </div>
                 <div name="botao2">
                     <Link to={'empregador'}>
-                    <button className="empregadores" type ="submit">Empregadores</button> 
+                    <button className={"empregadores"} type ="submit">Empregadores</button> 
                     </Link>
                 </div>
                 <div name="botao2">
                     <Link to={'egressos'}>
-                    <button className="egressos" type ="submit">Linkedin</button> 
+                    <button className={"egressos"} type ="submit">Linkedin</button> 
                     </Link>
                 </div>
             
@@ -44,13 +44,13 @@ const Home = () => {
                         <p>Setor de Trabalho</p>
                         <GraphSetor></GraphSetor>
                     </div>
-                    <div className="genero">
+                    <div className={"genero"}>
                         <p>Gênero</p>
                         <GraphGenero></GraphGenero> 
                     </div>  
                     
                 </div> 
-                <div className="container2">
+                <div className={"container2"}>
                     <div className="localTrabalho">
                         <p>País de Trabalho</p>
                         <GraphLocal></GraphLocal> 
