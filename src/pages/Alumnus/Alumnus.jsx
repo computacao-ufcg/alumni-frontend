@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react'
 import { Pagination } from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
-import ListAlumnus from './ListAlumnus'
+import ListAlumnus from './AssociacoesPendentes/ListAlumnus'
 import Header from '../../components/Header'
 
 import Title from '../../components/Title'
@@ -10,15 +10,54 @@ import { backend } from '../../services/api'
 
 import './styles.css'
 import { useState } from 'react';
+import { Nav, Dropdown, SelectPicker } from 'rsuite';
 
-import {SelectPicker}  from 'rsuite'
-
-
-
-
+import AssociacoesPendentes from './AssociacoesPendentes';
+import Associados from './Associados'
 
 
 
+
+const Alumnus = () => {
+    const [dataAux, setDataAux] = useState([])
+    const [data, setData] = useState(<Associados data={dataAux}/>)
+    const [activeNav, setActiveNav] = useState('Associados')
+   
+    
+    const handleNav = (eventKey) =>{
+      if(eventKey === 'Associados'){
+        setData(<Associados data={dataAux}/>)
+      }else if( eventKey === 'AssociacoesPendentes'){
+        setData(<AssociacoesPendentes handleData = {handleData}/>)
+      }
+      setActiveNav(eventKey)
+    }
+  
+    const handleData = (elemento) =>{
+      let list = dataAux
+      list.push(elemento)
+      setDataAux(list)
+    }
+  
+      return(
+          <React.Fragment>
+              <Header></Header>
+              <div className ={'MatchesPg'}>
+                  <Title name={"Alumnus"}/> 
+              </div>
+              <div className= 'associacoesContainer'>
+                <Nav onSelect={handleNav} activeKey={activeNav} appearance={'tabs'}>
+                  <Nav.Item eventKey={'Associados'}>Associados</Nav.Item>
+                  <Nav.Item eventKey={'AssociacoesPendentes'}>Associações Pendentes</Nav.Item>
+                </Nav>
+                {data}
+              </div>
+          </React.Fragment>
+      )
+  
+}
+
+{/** 
 const Alumnus = () => {
     const [dataAux, setDataAux] = useState([])
     const [page, setPage] = useState(0)
@@ -76,5 +115,6 @@ const Alumnus = () => {
         </React.Fragment>
     )
 }
+**/}
 
 export default Alumnus;
