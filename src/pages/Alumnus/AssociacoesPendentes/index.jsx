@@ -39,7 +39,24 @@ const AssociacoesPendentes = (props) => {
 
     const handleAlumnus = (value) =>{
         console.log(value)
-        setDataSelect(value.possibleMatches[20])
+        handleSelect(value.possibleMatches[20])
+    }
+
+    const handleSelect = (data) =>{
+        let listAux = []
+        data.map((e,index)=>{
+            let item = {
+                'label': e.fullName,
+                'value': index,
+                'role': 'default'
+            }
+            listAux.push(item)
+        })
+        setDataSelect(listAux)
+    }
+
+    const handleMatch = () =>{
+        
     }
 
     return (
@@ -54,7 +71,7 @@ const AssociacoesPendentes = (props) => {
                     <hr></hr>
                     <SelectPicker  data={dataSelect} style={{ width: 600 }} />
                     <hr></hr>
-                    <button>Associar</button>
+                    <button onClick={handleMatch}>Associar</button>
                 </div>
             </div>
             <Pagination

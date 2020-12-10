@@ -1,4 +1,7 @@
 .possivelMatch{
-    display: grid;
-    width: 50%;
+    display: block;
+}
+
+.mainAssociacoes{
+    display: flex;
 }
