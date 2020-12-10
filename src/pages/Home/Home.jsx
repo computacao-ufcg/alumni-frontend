@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import{Link} from 'react-router-dom'
 import Header from '../../components/Header'
 import Title from '../../components/Title'
@@ -6,10 +6,36 @@ import GraphGenero from './GraphGenero.jsx'
 import GraphSetor from './GraphSetor.jsx'
 import GraphLocal from './GraphLocal.jsx'
 import GraphProfissoes from './GraphProfissoes.jsx'
+import { backend } from '../../services/api'
+
 import "./styles.css"
 
 
-const Home = () => { 
+const Home = (props) => { 
+
+    const [dataAux, setDataAux] = useState([])
+    const [page, setPage] = useState(0)
+   
+    useEffect(()=>{
+        handleProfile()
+
+    },[])
+
+    const handleProfile = async () =>{
+        let query = 'statistics?courseName=COMPUTING_SCIENCE&level=UNDERGRADUATE' 
+        const res = await backend.get(query,{headers:{'Authentication-Token': localStorage.getItem('token')}})
+        .then(res => {
+            console.log(res)
+            setDataAux(res.data)
+
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+    }
+    
+    
+    
 
     return(
         <React.Fragment>
