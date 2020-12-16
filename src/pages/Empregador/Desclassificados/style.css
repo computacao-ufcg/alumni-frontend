@@ -1,5 +1,5 @@
 .mainDesclassificados{
-    display: flex;
+    display: flex; 
 }
 
 .inputEmpresa {
@@ -10,5 +10,13 @@
 
 .inputEmpresa:focus {
     outline: none;
+}
+
+.tabelaDesclassificados a{
+    color: #886859 ;
+}
+
+.paginacao .a {
+    color: #886859
 }
 

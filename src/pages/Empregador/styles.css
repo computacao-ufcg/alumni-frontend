@@ -5,7 +5,7 @@
 }
 
 .selectBoxes select{
-    background:rgba(0,115,229,0.6);
+    background:#E6DBD3;
     text-align: center;
     padding: .7rem 4rem;
     border: none;
@@ -28,7 +28,7 @@
 }
 
 .empregadorContainer button{
-    background:#0073e5;
+    background:#886859;
     color: #f1f1f1;
     text-align: center;
     padding: .7rem 4rem;
@@ -42,5 +42,5 @@
 }
 
 .empregadorContainer button:hover{
-    background-color: #0180ff;
+    background-color: #886859ea;
 }

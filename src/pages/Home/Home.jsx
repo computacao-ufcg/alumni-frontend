@@ -2,7 +2,6 @@ import React, {useState,useEffect} from 'react'
 import{Link} from 'react-router-dom'
 import Header from '../../components/Header'
 import Title from '../../components/Title'
-import GraphGenero from './GraphGenero.jsx'
 import GraphStatistics from './GraphStatistics.jsx'
 import { backend } from '../../services/api'
 
@@ -66,14 +65,13 @@ const Home = (props) => {
             </div>
             <div id="statistics">
                 <p>Estatísticas</p>
-                <div className = "container1">
-                    <div className={"genero"}>
+                <div className={'containerGraph'}>
+                    <div className={"grafico"}>
                         {loading ? null : 
                             <GraphStatistics data={dataAux}></GraphStatistics>
                         }
                     </div>  
-                </div>
-                    
+                </div>      
             </div> 
             
         </React.Fragment>
