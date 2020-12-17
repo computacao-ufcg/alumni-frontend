@@ -3,7 +3,7 @@
 }
 
 .alumnusPossibleMatches p{
-    color: #0073e5;
+    color: #886859;
     font-size: 2rem;
     font-weight: 650;
     margin-top: 0;
@@ -12,7 +12,7 @@
 
 .alumnusList{
     display: flex;
-    color:#0073e5;
+    color:#886859;
     font-size: 1rem;
 }
 
@@ -43,7 +43,7 @@
 .associacoesContainer button{
     width: 200px;
     height: 50px;
-    background:#0073e5;
+    background:#886859;
     color: #f1f1f1;
     border: none;
     border-radius: 5px;
@@ -52,5 +52,5 @@
     cursor: pointer;
 }
 .associacoesContainer button:hover{
-    background-color: #0180ff;
+    background-color: #886859ea;
 }

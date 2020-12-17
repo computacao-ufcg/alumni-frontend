@@ -106,18 +106,20 @@ const Desclassificados = (props) => {
                     <button onClick={handleSubmit}>Associar</button>
                 </div>
             </div>
-            <Pagination
-                pages={dataMaster.totalPages ? dataMaster.totalPages :0}
-                maxButtons={5}
-                onSelect ={handlePage}
-                activePage={page+1}
-                prev
-                next
-                first
-                last
-                ellipsis
-                boundaryLinks
+            <div className ={'paginacao'}>
+                <Pagination
+                    pages={dataMaster.totalPages ? dataMaster.totalPages :0}
+                    maxButtons={5}
+                    onSelect ={handlePage}
+                    activePage={page+1}
+                    prev
+                    next
+                    first
+                    last
+                    ellipsis
+                    boundaryLinks
                 />
+            </div>
         </div>
     )
 }

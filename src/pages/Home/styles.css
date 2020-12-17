@@ -7,15 +7,15 @@
     height:460px;
     
     margin-right: 2%;
-    color:#0073e5;
+    color:#886859;
 
     text-align: center;
-    border: 2px solid #0073e5;
+    border: 2px solid #886859;
 
 }
  #pending-matches p{
-     font-size: 1.8rem;
-     font-weight: 650;
+    font-size: 1.8rem;
+    font-weight: 650;
  }
 
 #pending-matches .perfis,
@@ -23,7 +23,7 @@
 #pending-matches .egressos{
    
     
-    background:#0073e5;
+    background:#886859;
     color: #f1f1f1;
     width: 200px;
     height: 50px;
@@ -38,21 +38,22 @@
 
 #pending-matches .empregadores:hover,
 #pending-matches .perfis:hover{
-    background-color: #0180ff;
+    background-color: #886859ea;
 
 }
 
 #statistics{
-    float: left;  	
+    float: left;
     width:47%;
     height:460px;
     
+    
     margin-left: 2%;
     
-    color:#0073e5;
+    color:#886859;
 
     text-align: center;
-    border: 2px solid #0073e5;
+    border: 2px solid #886859;
 }
 
 #statistics p{
@@ -61,20 +62,13 @@
 
 }
 
-#statistics .container1 p,
-#statistics .container2 p{
+#statistics .containerGraph{
+    margin-top: 5%;
+    display: inline-flex;
+}
+
+#statistics .grafico p{
     font-size: 0.6rem;
 }
 
-#statistics .container1{
 
-    justify-content: center;
-    float: left;
-}
-
-
-#statistics .container2{
-
-    justify-content: center;
-    float: right;
-} 

@@ -74,19 +74,21 @@ const AssociacoesPendentes = (props) => {
                     <button onClick={handleMatch}>Associar</button>
                 </div>
             </div>
-            <Pagination
-                pages={dataAux.totalPages ? dataAux.totalPages :0}
-                maxButtons={5}
-                onSelect ={handlePage}
-                activePage={page+1}
-                prev
-                next
-                first
-                last
-                ellipsis
-                boundaryLinks
+            <div className ={'paginacao'}>
+                <Pagination
+                    pages={dataAux.totalPages ? dataAux.totalPages :0}
+                    maxButtons={5}
+                    onSelect ={handlePage}
+                    activePage={page+1}
+                    prev
+                    next
+                    first
+                    last
+                    ellipsis
+                    boundaryLinks
                 />
-        </div>
+            </div>
+    </div>
     )
 }
 

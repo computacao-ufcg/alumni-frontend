@@ -2,10 +2,7 @@ import React, {useState,useEffect} from 'react'
 import{Link} from 'react-router-dom'
 import Header from '../../components/Header'
 import Title from '../../components/Title'
-import GraphGenero from './GraphGenero.jsx'
-import GraphSetor from './GraphSetor.jsx'
-import GraphLocal from './GraphLocal.jsx'
-import GraphProfissoes from './GraphProfissoes.jsx'
+import GraphStatistics from './GraphStatistics.jsx'
 import { backend } from '../../services/api'
 
 import "./styles.css"
@@ -15,6 +12,7 @@ const Home = (props) => {
 
     const [dataAux, setDataAux] = useState([])
     const [page, setPage] = useState(0)
+    const [loading, setLoading] = useState(true)
    
     useEffect(()=>{
         handleProfile()
@@ -22,11 +20,13 @@ const Home = (props) => {
     },[])
 
     const handleProfile = async () =>{
+        setLoading(true)
         let query = 'statistics?courseName=COMPUTING_SCIENCE&level=UNDERGRADUATE' 
         const res = await backend.get(query,{headers:{'Authentication-Token': localStorage.getItem('token')}})
         .then(res => {
             console.log(res)
             setDataAux(res.data)
+            setLoading(false)
 
         })
         .catch(err =>{
@@ -65,28 +65,15 @@ const Home = (props) => {
             </div>
             <div id="statistics">
                 <p>Estatísticas</p>
-                <div className = "container1">
-                    <div className="setor">
-                        <p>Setor de Trabalho</p>
-                        <GraphSetor></GraphSetor>
-                    </div>
-                    <div className={"genero"}>
-                        <p>Gênero</p>
-                        <GraphGenero></GraphGenero> 
+                <div className={'containerGraph'}>
+                    <div className={"grafico"}>
+                        {loading ? null : 
+                            <GraphStatistics data={dataAux}></GraphStatistics>
+                        }
                     </div>  
-                    
-                </div> 
-                <div className={"container2"}>
-                    <div className="localTrabalho">
-                        <p>País de Trabalho</p>
-                        <GraphLocal></GraphLocal> 
-                    </div>
-                    <div className="Profissões">
-                        <p>Profissões</p>
-                        <GraphProfissoes></GraphProfissoes> 
-                    </div>
-                </div>
-            </div>
+                </div>      
+            </div> 
+            
         </React.Fragment>
     )
 }
