@@ -12,7 +12,7 @@ const AssociacoesPendentes = (props) => {
     const [dataAux, setDataAux] = useState([])
     const [page, setPage] = useState(0)
     const [dataSelect, setDataSelect] = useState([])
-    const [selectEmpresa, setSelectEmpresa] = useState('Faça a Associação')
+    const [selectAluno, setSelectAluno] = useState('Faça a Associação')
 
     useEffect(()=>{
         handleProfile(page)
@@ -67,7 +67,7 @@ const AssociacoesPendentes = (props) => {
                     <hr></hr>
                 </div>
                 <div className={'possivelMatch'}>
-                    <Input style={{width:600}} disabled placeholder = {selectEmpresa}/>
+                    <Input style={{width:600}} disabled placeholder = {selectAluno}/>
                     <hr></hr>
                     <SelectPicker  data={dataSelect} style={{ width: 600 }} />
                     <hr></hr>
