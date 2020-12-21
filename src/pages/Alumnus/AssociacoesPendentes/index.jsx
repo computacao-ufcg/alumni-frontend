@@ -39,14 +39,14 @@ const AssociacoesPendentes = (props) => {
 
     const handleAlumnus = (value) =>{
         console.log(value)
-        handleSelect(value.possibleMatches[20])
+        handleSelect(value.possibleMatches)
     }
 
     const handleSelect = (data) =>{
         let listAux = []
         data.map((e,index)=>{
             let item = {
-                'label': e.fullName,
+                'label': e.profile.fullName,
                 'value': index,
                 'role': 'default'
             }
