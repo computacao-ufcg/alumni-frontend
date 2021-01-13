@@ -21,7 +21,7 @@ const Home = (props) => {
 
     const handleProfile = async () =>{
         setLoading(true)
-        let query = 'statistics?courseName=COMPUTING_SCIENCE&level=UNDERGRADUATE' 
+        let query = 'statistics?courseName=computing-science&level=undergraduate' 
         const res = await backend.get(query,{headers:{'Authentication-Token': localStorage.getItem('token')}})
         .then(res => {
             console.log(res)
