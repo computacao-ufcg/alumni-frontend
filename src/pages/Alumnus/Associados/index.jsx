@@ -5,6 +5,7 @@ import {backend} from '../../../services/api'
 
 const { Column, HeaderCell, Cell } = Table;
 
+
 const Associados = (props) => {
     const [page, setPage] = useState(0)
     const [data, setData] = useState([])
@@ -70,5 +71,6 @@ const Associados = (props) => {
                 </div>
             </div>
         ) 
+
 }
 export default Associados

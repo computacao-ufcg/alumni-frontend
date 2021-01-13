@@ -10,10 +10,12 @@ const AssociacoesPendentes = (props) => {
     const [dataAux, setDataAux] = useState([])
     const [page, setPage] = useState(0)
     const [dataSelect, setDataSelect] = useState([])
+
     const [possibleMatches, setPossibleMatches] = useState([])
     const [selectAluno, setSelectAluno] = useState('Faça a Associação')
     const [selectedRegistration, setSelectedRegistration] = useState('')
     const [selectedProfile, setSelectedProfile] = useState('')
+
 
     useEffect(()=>{
         handleProfile(page)
@@ -40,9 +42,10 @@ const AssociacoesPendentes = (props) => {
 
     const handleAlumnus = (value) =>{
         console.log(value)
+
         setSelectedRegistration(value.alumnus.registration)
         setPossibleMatches(value.possibleMatches)
-        handleSelect(value.possibleMatches)
+        
     }
 
     const handleSelect = (data) =>{

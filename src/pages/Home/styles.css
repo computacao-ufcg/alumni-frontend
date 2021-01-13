@@ -1,5 +1,6 @@
 .homePage {
     display: grid;
+    
 }
 #pending-matches{
     float: right;  	
