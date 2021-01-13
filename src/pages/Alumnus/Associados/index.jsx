@@ -5,6 +5,7 @@ import {backend} from '../../../services/api'
 
 const { Column, HeaderCell, Cell } = Table;
 
+
 const Associados = (props) => {
     const [page, setPage] = useState(0)
     const [data, setData] = useState([])
@@ -16,11 +17,12 @@ const Associados = (props) => {
     },[])
 
     const handleClassificados = async() =>{
-        const res = await backend.get('match/list/' + page,{headers:{'Authentication-Token': localStorage.getItem('token')}})
+        backend.get('match/list/' + page, {headers:{'Authentication-Token': localStorage.getItem('token')}})
         .then(res =>{
-            setData(res.content)
+            setData(res.data.content)
             setDataMaster(res)
             console.log(res)
+            console.log(res.data)
         })
         .catch(err =>{
             console.log(err)
@@ -28,40 +30,47 @@ const Associados = (props) => {
         })
     }
 
-    return (
-        <div>
-            <div className={'associados'}>
-                <Table
-                height={480}
-                width={800}
-                data={props.data}
-                onRowClick={data => {
-                    console.log(data);
-                }}
-                >
-                <Column width={300} >
-                    <HeaderCell >Nome do Egresso</HeaderCell>
-                    <Cell dataKey="fullName">
-                
-                    </Cell>
-                </Column>
-                <Column width={120} >
-                    <HeaderCell>Linkedin</HeaderCell>
-
-                    <Cell>
-                    {rowData => {
-                        return (
-                        <span>
-                            <a target={'_blank'} href={rowData.linkedinID}>Link</a> 
-                        
-                        </span>
-                        );
+        return (
+            <div>
+                <div className={'associados'}>
+                    <Table
+                    height={480}
+                    width={800}
+                    data={data}
+                    onRowClick={data => {
+                        console.log(data);
                     }}
-                    </Cell>
-                </Column>
-                </Table>
+                    >
+                    <Column width={300} >
+                        <HeaderCell >Nome do Egresso</HeaderCell>
+                        <Cell dataKey="registration">
+                    
+                        </Cell>
+                    </Column>
+                    <Column width={120} >
+                        <HeaderCell>Linkedin</HeaderCell>
+    
+                        <Cell>
+                        {rowData => {
+                            return (
+                            <span>
+                                <a target={'_blank'} href={rowData.linkedinId}>Link</a> 
+                            
+                            </span>
+                            );
+                        }}
+                        </Cell>
+                    </Column>
+                    <Column width={120} >
+                        <HeaderCell >Deletar Associação</HeaderCell>
+                        <Cell dataKey="registration">
+                    
+                        </Cell>
+                    </Column>
+                    </Table>
+                </div>
             </div>
-        </div>
-    )
+        ) 
+
 }
 export default Associados
