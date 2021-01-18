@@ -43,7 +43,7 @@ const Associados = (props) => {
                     >
                     <Column width={300} >
                         <HeaderCell >Nome do Egresso</HeaderCell>
-                        <Cell dataKey="registration">
+                        <Cell dataKey="fullName">
                     
                         </Cell>
                     </Column>
@@ -62,7 +62,7 @@ const Associados = (props) => {
                         </Cell>
                     </Column>
                     <Column width={120} >
-                        <HeaderCell >Deletar Associação</HeaderCell>
+                        <HeaderCell >Matricula</HeaderCell>
                         <Cell dataKey="registration">
                     
                         </Cell>

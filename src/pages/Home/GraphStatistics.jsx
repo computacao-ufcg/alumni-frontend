@@ -17,6 +17,7 @@ const GraphStatistics =(props) => {
         const res = await backend.get(`/statistics?courseName=computing-science&level=undergraduate`, { headers: {'Authentication-Token': localStorage.getItem('token')}})
         console.log(res)
         setStatistics(res.data)
+        console.log(res.data)
         console.log(formatData())
       } catch (err) {
         console.log(err.response)

@@ -45,6 +45,7 @@ const AssociacoesPendentes = (props) => {
 
         setSelectedRegistration(value.alumnus.registration)
         setPossibleMatches(value.possibleMatches)
+        handleSelect(value.possibleMatches)
         
     }
 
@@ -79,7 +80,7 @@ const AssociacoesPendentes = (props) => {
         const query = `/match?registration=${selectedProfile.registration}&linkedinId=${selectedProfile.linkedinId}`
         
         try {
-            const res = await backend.post(query, {}, { headers: { 
+            const res = await backend.put(query, {}, { headers: { 
                 'Authentication-Token': localStorage.getItem('token'),
                 'Content-Type': 'application/json; charset=UTF-8'
             }})
