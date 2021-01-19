@@ -92,12 +92,12 @@ const AssociacoesPendentes = (props) => {
 
     return (
         <div>
-            <div className={'mainAssociacoes'}>
+            <div className={'mainMatches'}>
                 <div>
                 <ListAlumnus handleAlumnus={handleAlumnus} listData={dataAux.content ? dataAux.content :[]}/>
                     <hr></hr>
                 </div>
-                <div className={'possivelMatch'}>
+                <div className={'possibleMatch'}>
                     <Input style={{width:600}} disabled placeholder = {selectAluno}/>
                     <hr></hr>
                     <SelectPicker data={dataSelect} style={{ width: 600 }} onSelect={i => handleSelectProfile(i)} />
@@ -105,7 +105,7 @@ const AssociacoesPendentes = (props) => {
                     <button onClick={handleMatch}>Associar</button>
                 </div>
             </div>
-            <div className ={'paginacao'}>
+            <div className ={'pagination'}>
                 <Pagination
                     pages={dataAux.totalPages ? dataAux.totalPages :0}
                     maxButtons={5}

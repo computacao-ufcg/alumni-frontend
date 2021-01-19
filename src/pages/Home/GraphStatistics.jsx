@@ -1,4 +1,4 @@
-import React, { PureComponent, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';

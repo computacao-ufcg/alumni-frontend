@@ -6,7 +6,7 @@ const { Column, HeaderCell, Cell } = Table;
 
 const ListEgressos =(props) =>{
     return(
-        <div className={'tabelaEgressos'}>
+        <div className={'tableEgressos'}>
             <Table
             height={480}
             width={800}

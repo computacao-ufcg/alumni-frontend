@@ -51,12 +51,12 @@ const Home = (props) => {
                     <button className={"perfis"} type ="submit" >Perfis</button> 
                     </Link>
                 </div>
-                <div name="botao2">
+                <div className={"botao2"}>
                     <Link to={'empregador'}>
                     <button className={"empregadores"} type ="submit">Empregadores</button> 
                     </Link>
                 </div>
-                <div name="botao2">
+                <div className={"botao2"}>
                     <Link to={'egressos'}>
                     <button className={"egressos"} type ="submit">Linkedin</button> 
                     </Link>
