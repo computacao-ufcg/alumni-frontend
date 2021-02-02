@@ -4,7 +4,7 @@ import ListAlumnus from './ListAlumnus'
 import { backend } from '../../../services/api'
 
 import './styles.css'
-import {Pagination, SelectPicker, Input, InputGroup } from 'rsuite'
+import {Pagination, SelectPicker, Input} from 'rsuite'
 
 const AssociacoesPendentes = (props) => {
     const [dataAux, setDataAux] = useState([])
@@ -71,6 +71,7 @@ const AssociacoesPendentes = (props) => {
         setSelectedProfile(match)
     }
 
+    // o atual backend precisa que a requesicao seja feida pelo body. LEMBRAR DE MUDAR
     const handleMatch = async () =>{
         const reqBody = {
             registration: selectedProfile.registration,

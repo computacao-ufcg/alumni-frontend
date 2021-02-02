@@ -4,7 +4,7 @@ import {
 } from 'recharts';
 import { backend } from '../../services/api';
 
-const GraphStatistics =(props) => {
+const GraphStatistics = (props) => {
 
   const [statistics, setStatistics] = useState('')
 
@@ -24,6 +24,7 @@ const GraphStatistics =(props) => {
       }
   }
 
+//tentativa de funcao para formatar dados (alumni antigo)
   const formatData = () => {
       return [
         {
@@ -76,12 +77,64 @@ const GraphStatistics =(props) => {
         }
       ]
   }
+
+//mock dos dados 
+  const data = [
+    {
+      name: "numberAcademyEmployedCourse",
+      value: 0
+    },
+    {
+      name: "numberAcademyEmployedLevel",
+      value: 0
+    },
+    {
+      name: "numberAlumniCourse",
+      value: 0
+    },
+    {
+      name: "numberAlumniLevel",
+      value: 3
+    },
+    {
+      name: "numberGovernmentEmployedCourse",
+      value: 0
+    },
+    {
+      name: "numberGovernmentEmployedLevel",
+      value: 0
+    },
+    {
+      name: "numberIndustryEmployedCourse",
+      value: 0
+    },
+    {
+      name: "numberMappedAlumniCourse",
+      value: 0
+    },
+    {
+      name: "numberMappedAlumniLevel",
+      value: 0
+    },
+    {
+      name: "numberOngEmployedLevel",
+      value: 0
+    },
+    {
+      name: "numberOthersEmployedCourse",
+      value: 0
+    },
+    {
+      name: "numberOthersEmployedLevel",
+      value: 0
+    }
+  ]
   
     return (
       <BarChart
         width={500}
         height={300}
-        data={formatData}
+        data={data}
         margin={{
           top: 5, right: 30, left: 20, bottom: 5,
         }}
