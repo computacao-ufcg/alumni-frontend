@@ -10,7 +10,7 @@ const ListAlumnus =(props) =>{
     return(
         <div className={'listAlumnus'}>
         
-            <div className={'associados'}>
+            <div className={'matches'}>
             <Table
             height={480}
             width={800}

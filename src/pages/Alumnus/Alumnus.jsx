@@ -45,7 +45,7 @@ const Alumnus = () => {
               <div className ={'MatchesPg'}>
                   <Title name={"Alumnus"}/> 
               </div>
-              <div className= 'associacoesContainer'>
+              <div className= 'matchesContainer'>
                 <Nav onSelect={handleNav} activeKey={activeNav} appearance={'tabs'}>
                   <Nav.Item eventKey={'Associados'}>Associados</Nav.Item>
                   <Nav.Item eventKey={'AssociacoesPendentes'}>Associações Pendentes</Nav.Item>
