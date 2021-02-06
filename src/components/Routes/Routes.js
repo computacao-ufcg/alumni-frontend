@@ -1,12 +1,12 @@
 import React from 'react'
 import{ Switch, Route, BrowserRouter} from 'react-router-dom'
 import PrivateRoute from './PrivateRoute'
-import Home from '../../pages/Home/Home'
-import Login from '../../pages/Login/Login'
-import Empregador from '../../pages/Empregador/Empregador'
-import Alumnus from '../../pages/Alumnus/Alumnus'
-import NotFound from '../NotFound'
-import Egressos from '../../pages/Egressos/Egressos'
+import Home from '../../pages/Home'
+import Login from '../../pages/Login'
+import Empregador from '../../pages/Empregador'
+import Alumnus from '../../pages/Alumnus'
+import NotFound from './NotFound'
+import Egressos from '../../pages/Egressos'
 
 const Routes = () => (
     <BrowserRouter>

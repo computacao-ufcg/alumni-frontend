@@ -3,7 +3,7 @@ import Header from '../../components/Header'
 import Title from '../../components/Title'
 import {useState,useEffect} from 'react'
 import { backend } from '../../services/api'
-import ListEgressos from '../Egressos/listEgressos'
+import ListEgressos from './listEgressos'
 import { Pagination } from 'rsuite';
 import './style.css'
 
