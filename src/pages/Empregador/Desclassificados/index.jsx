@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import {backend} from '../../../services/api'
 import ListDesclassificados from './ListDesclassificados'
-import {Pagination, SelectPicker, Input, InputGroup } from 'rsuite'
+import {Pagination, SelectPicker, Input} from 'rsuite'
 
 const Desclassificados = (props) => {
     const [page, setPage] = useState(0)

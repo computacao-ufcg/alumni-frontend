@@ -4,7 +4,7 @@ import Header from '../../components/Header'
 import Title from '../../components/Title'
 import Classificados from './Classificados'
 import Desclassificados from './Desclassificados'
-import { Nav, Dropdown } from 'rsuite';
+import { Nav } from 'rsuite';
 
 import './styles.css'
 import { useState } from 'react';

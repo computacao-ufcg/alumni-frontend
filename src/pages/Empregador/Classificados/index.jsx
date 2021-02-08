@@ -1,6 +1,5 @@
 import React, {useEffect,useState} from 'react'
 import {backend} from '../../../services/api'
-import {Pagination, SelectPicker, Input, InputGroup } from 'rsuite'
 import {Table} from 'rsuite'
 import './style.css'
 
